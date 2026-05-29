@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nick Rapoza | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <img src="images/profile_picture_new.png" alt="Nick Rapoza" class="profile-pic">
+
+    <h1>Nick Rapoza</h1>
+
+    <p class="hero-text">
+      Computer Science Graduate • Cybersecurity Master's Student
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#projects" class="button">View Projects</a>
+
+      <a href="Public Resume.pdf" target="_blank" class="button secondary-button">
+        View Resume
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am a Computer Science graduate and Professional Science Master’s student in Cybersecurity at the University of Rhode Island with interests in software engineering, automation, artificial intelligence, and security.
+    </p>
+
+    <p>
+      My experience includes building scalable monitoring and automation systems, developing data-driven applications, and working with infrastructure-focused technologies including cloud systems, system reliability tooling, and security workflows.
+    </p>
+
+    <p>
+      I enjoy solving technically challenging problems and improving real systems through automation, observability, and efficient engineering practices. I am currently seeking opportunities in software engineering, infrastructure, cybersecurity, and automation-focused roles.
+    </p>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+
+    <h2>Projects</h2>
+
+    <!-- FEATURED PROJECT -->
+    <div class="card">
+      
+      <h3>Website Monitoring & Automation System</h3>
+
+
+      <img src="images/monitoring/project-image-monitoring-dashboard.png"
+        class="project-image"
+        alt="Monitoring Dashboard">
+    
+
+      <p>
+        Built a scalable Python-based monitoring system that validates website functionality beyond uptime checks by simulating real user interactions using Selenium.
+      </p>
+
+      <p>
+        Integrated Prometheus metrics and Grafana dashboards to track system health, visualize failures, and support real-time observability and alerting.
+      </p>
+
+      <p>
+        Designed for reliability testing, automation, and infrastructure validation at scale.
+      </p>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card">
+
+      <h3>Sports Data Scraper & Analysis System</h3>
+      
+      <p>
+        Developed a Python-based web scraping system to collect structured sports data from multiple public sources and analyze performance trends.
+      </p>
+
+      <p>
+        Implemented data processing pipelines and deisgned algorithms to extract meaningful insights from player statistics and game outcomes.
+      </p>
+      <!-- Coming Soon
+      <div class="project-links">
+        <a href="#" class="button">Demo</a>
+      </div>
+         -->
+    </div>
+
+    <!-- PROJECT 3 (PUBLIC) -->
+    <div class="card">
+
+      <h3>Group Calendar Application</h3>
+
+      <p>
+        Full-stack collaborative calendar application enabling users to compare schedules and coordinate availability in real time.
+      </p>
+
+      <p>
+        Built with Firebase for authentication, real-time synchronization, and cloud functions, with frontend UI designed for usability and responsiveness.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/carpspet/AreYouFreeCSC305" target="_blank" class="button">
+          GitHub
+        </a>
+      </div>
+
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="card">
+
+      <h3>UEFN Game Development Project</h3>
+
+      <img src="images/UEFN/project-image-uefn.png"
+        class="project-image"
+        alt="Unreal Engine Map">
+
+      <p>
+        Designed and launched a multiplayer game experience using Unreal Engine and Verse scripting, achieving 92,000+ total players.
+      </p>
+      
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+
+    <h2>Experience</h2>
+
+    <div class="card">
+
+      <h3>University of Rhode Island — IT Services</h3>
+
+      <p class="date">Software & Infrastructure Support • 2025</p>
+
+      <p>
+        Developed automation tools for real-time web service monitoring and validation.
+      </p>
+
+      <p>
+        Supported system reliability and uptime assurance through Python-based automation, Selenium workflows, and diagnostic tooling.
+      </p>
+
+      <p>
+        Contributed to infrastructure monitoring and cloud-based service verification systems.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Blackswan Country Club</h3>
+
+      <p class="date">Operations & Customer Service • 2020 – 2025</p>
+
+      <p>
+        Worked in multiple operational roles, developing communication, leadership, and problem-solving skills in a fast-paced environment.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="card">
+
+      <p>
+        Open to opportunities in software engineering, cybersecurity, automation, and infrastructure engineering.
+      </p>
+
+      <p><strong>Email:</strong> nick_rapoza@uri.edu</p>
+
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/nick-rapoza-aa97412a9/" target="_blank">
+          Nick-Rapoza
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ANIMATION SCRIPT -->
+  <script>
+    const elements = document.querySelectorAll('.section, .card, .project-image');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+/* Base colors and fonts */
+
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: rgba(229, 231, 235, 0.9);
+  --muted: rgba(229, 231, 235, 0.7);
+  --accent: #60a5fa;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Font and Styles */
+
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 650;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15.5px;
+  color: var(--muted);
+}
+
+/* Sections */
+
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px; /* reduced spacing */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  display: block;
+  margin: 0 auto 18px auto; 
+
+  border: 2px solid var(--border);
+}
+
+/* Project Cards */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+/* Images */
+
+.project-image {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: 0.7s ease;
+}
+
+.project-image.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.secondary-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* Tech Stack */
+
+.tech-stack {
+  font-size: 13px;
+  color: #93c5fd;
+  margin-top: 8px;
+}
+
+/* Links */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
