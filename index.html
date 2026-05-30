@@ -94,7 +94,7 @@
       </p>
 
       <p>
-        Designed an education predictive model using player and game statistics, achieving 83.3% accuracy across 600+ evaluated games.
+        Designed an educational predictive model using player and game statistics, achieving 83.3% accuracy across 600+ evaluated games.
       </p>
       
       <div class="project-links">
@@ -208,6 +208,18 @@
 
   </section>
 
+  <div id="videoModal" class="video-modal">
+
+    <div class="video-content">
+
+      <span class="close-btn" onclick="closeVideo()">&times;</span>
+
+      <video id="demoVideo" controls></video>
+
+    </div>
+
+  </div>
+
   <!-- ANIMATION SCRIPT -->
   <script>
     const elements = document.querySelectorAll('.section, .card, .project-image');
@@ -224,11 +236,12 @@
   </script>
 
   <script>
-    const modal = document.getElementById("videoModal");
+  const modal = document.getElementById("videoModal");
     const video = document.getElementById("demoVideo");
 
-    function openVideo() {
+    function openVideo(src) {
       modal.style.display = "flex";
+      video.src = src;
       video.currentTime = 0;
       video.play();
     }
@@ -236,28 +249,16 @@
     function closeVideo() {
       modal.style.display = "none";
       video.pause();
+      video.src = "";
     }
 
-    // close if clicking outside video
-    window.onclick = function(event) {
-      if (event.target === modal) {
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
         closeVideo();
       }
-    }
+    });
   </script>
 
 </body>
-
-<div id="videoModal" class="video-modal">
-
-    <div class="video-content">
-
-      <span class="close-btn" onclick="closeVideo()">&times;</span>
-
-      <video id="demoVideo" controls></video>
-
-    </div>
-
-</div>
 
 </html>
