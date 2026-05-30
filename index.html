@@ -98,10 +98,12 @@
       </p>
       
       <div class="project-links">
-        <a href="videos/Project Demo Web Scraper.mp4" target="_blank" class="button">
+
+        <button class="button" onclick="openVideo()">
           View Demo
-        </a>
+        </button>
       </div>
+
     </div>
 
     <!-- PROJECT 3 (PUBLIC) -->
@@ -221,6 +223,42 @@
     }, { threshold: 0.15 });
 
     elements.forEach(el => observer.observe(el));
+  </script>
+
+  <div id="videoModal" class="video-modal">
+    <div class="video-content">
+
+      <span class="close-btn" onclick="closeVideo()">&times;</span>
+
+      <video id="demoVideo" controls>
+        <source src="videos/Project Demo Web Scraper.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+    </div>  
+  </div>
+
+  <script>
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("demoVideo");
+
+    function openVideo() {
+      modal.style.display = "flex";
+      video.currentTime = 0;
+      video.play();
+    }
+
+    function closeVideo() {
+      modal.style.display = "none";
+      video.pause();
+    }
+
+    // close if clicking outside video
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeVideo();
+      }
+    }
   </script>
 
 </body>
